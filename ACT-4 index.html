@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Audio Section</title>
+
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+        }
+
+        body{
+            font-family: 'Inter', sans-serif;
+            color:#111;
+        }
+
+        #page2{
+            min-height:100vh;
+            padding:60px 40px;
+            background:url('Skusta Clee.jpg') center/cover no-repeat;
+            position:relative;
+        }
+
+        #page2::before{
+            content:'';
+            position:absolute;
+            inset:0;
+            background:rgba(255,255,255,0.75);
+        }
+
+        .playlist-bar,
+        .audio-box{
+            position:relative;
+            z-index:1;
+        }
+
+        .playlist-bar{
+            overflow:hidden;
+            white-space:nowrap;
+            margin-bottom:40px;
+        }
+
+        .scroll-text{
+            display:inline-block;
+            padding-left:100%;
+            animation:scrolling 18s linear infinite;
+            font-size:22px;
+            color:#222;
+            font-weight:bold;
+        }
+
+        @keyframes scrolling{
+            0%{ transform:translateX(0); }
+            100%{ transform:translateX(-100%); }
+        }
+
+        .audio-box{
+            text-align:center;
+        }
+
+        .audio-box h2{
+            font-size:35px;
+            margin-bottom:20px;
+            color:#111;
+        }
+
+        .gif-row{
+            margin-top:20px;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            gap:15px;
+        }
+
+        .gif{
+            width:45px;
+            height:45px;
+        }
+
+        .gif-label{
+            color:#111;
+            font-weight:bold;
+            font-size:18px;
+        }
+    </style>
+</head>
+
+<body>
+
+<div id="page2">
+
+    <div class="playlist-bar">
+        <div class="scroll-text">
+            🎵 Since Day One 🎵
+        </div>
+    </div>
+
+    <div class="audio-box">
+        <h2> Skusta Clee Album</h2>
+
+        <audio controls autoplay>
+            <source src="Skusta Clee - Since Day One (Lyrics) Ft. Flow G.mp3" type="audio/mpeg">
+        </audio>
+
+        <div class="gif-row">
+            <img class="gif" src="Skusta Clee gif.gif">
+            <span class="gif-label">Listening Mode</span>
+            <img class="gif" src="Skusta Clee gif.gif">
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>

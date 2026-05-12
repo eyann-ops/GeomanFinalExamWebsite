@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login Section</title>
+
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+        }
+
+        body{
+            font-family: 'Inter', sans-serif;
+        }
+
+        #login-screen{
+            position:fixed;
+            inset:0;
+            z-index:9999;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            background:#90E0EF;
+        }
+
+        .login-box{
+            width:360px;
+            background:white;
+            padding:40px;
+            border-radius:20px;
+            box-shadow:0 10px 30px rgba(0,0,0,0.1);
+            text-align:center;
+        }
+
+        .login-box h1{
+            font-size:30px;
+            margin-bottom:10px;
+            color:#222;
+        }
+
+        .login-box p{
+            color:#777;
+            margin-bottom:20px;
+        }
+
+        .login-box input{
+            width:100%;
+            padding:14px;
+            margin-bottom:15px;
+            border-radius:10px;
+            border:1px solid #ccc;
+            outline:none;
+            font-size:14px;
+        }
+
+        .login-box input:focus{
+            border-color:#2a9fd6;
+        }
+
+        .login-box button{
+            width:100%;
+            padding:14px;
+            border:none;
+            border-radius:10px;
+            background:#2a9fd6;
+            color:white;
+            font-weight:bold;
+            cursor:pointer;
+            transition:0.3s;
+        }
+
+        .login-box button:hover{
+            background:#1a7abf;
+        }
+
+        .link{
+            margin-top:15px;
+            font-size:13px;
+            color:#777;
+        }
+
+        .link a{
+            color:#111;
+            text-decoration:none;
+        }
+
+        .error-msg{
+            display:none;
+            color:red;
+            margin-bottom:10px;
+            font-size:13px;
+        }
+
+        .success-msg{
+            display:none;
+            color:green;
+            margin-bottom:10px;
+            font-size:13px;
+        }
+    </style>
+</head>
+
+<body>
+
+<div id="login-screen">
+    <div class="login-box">
+        <h1>Hi 🥰</h1>
+        <p>Please sign in to continue</p>
+
+        <div class="error-msg" id="error-msg">
+            Please fill in all fields.
+        </div>
+
+        <div class="success-msg" id="success-msg">
+            Login successful! 
+        </div>
+
+        <input type="text" id="username" placeholder="Username">
+        <input type="password" id="password" placeholder="Password">
+
+        <button onclick="doLogin()">Login</button>
+
+        <div class="link">
+            No account yet? <a href="#">Create one</a>
+        </div>
+    </div>
+</div>
+
+<script>
+    function doLogin() {
+        const u = document.getElementById('username').value.trim();
+        const p = document.getElementById('password').value.trim();
+
+        if(!u || !p){
+            document.getElementById('error-msg').style.display = 'block';
+            document.getElementById('success-msg').style.display = 'none';
+            return;
+        }
+
+        document.getElementById('error-msg').style.display = 'none';
+        document.getElementById('success-msg').style.display = 'block';
+    }
+</script>
+
+</body>
+</html>

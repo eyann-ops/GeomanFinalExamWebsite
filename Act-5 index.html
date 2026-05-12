@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hero Section</title>
+
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+        }
+
+        body{
+            font-family: 'Inter', sans-serif;
+            color:#1a3c5e;
+        }
+
+        #page1{
+            min-height:100vh;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            background:#90E0EF;
+            text-align:center;
+            padding:40px;
+        }
+
+        .hero{
+            max-width:700px;
+        }
+
+        .hero-tag{
+            letter-spacing:4px;
+            text-transform:uppercase;
+            color:#888;
+            margin-bottom:20px;
+        }
+
+        .hero-title{
+            font-size:clamp(40px,6vw,70px);
+            line-height:1.1;
+            margin-bottom:20px;
+            color:#222;
+        }
+
+        .hero-title span{
+            color:#ff4d6d;
+        }
+
+        .hero-sub{
+            font-size:17px;
+            color:#666;
+            line-height:1.8;
+            margin-bottom:35px;
+        }
+
+        .hero-btns{
+            display:flex;
+            justify-content:center;
+            gap:15px;
+            flex-wrap:wrap;
+        }
+
+        .btn-primary{
+            padding:14px 30px;
+            border:none;
+            border-radius:10px;
+            background:#2a9fd6;
+            color:white;
+            font-weight:bold;
+            cursor:pointer;
+            transition:0.3s;
+        }
+
+        .btn-primary:hover{
+            background:#1a7abf;
+        }
+
+        .btn-outline{
+            padding:14px 30px;
+            border:2px solid #2a9fd6;
+            border-radius:10px;
+            background:transparent;
+            color:#2a9fd6;
+            font-weight:bold;
+            cursor:pointer;
+            transition:0.3s;
+        }
+
+        .btn-outline:hover{
+            background:#2a9fd6;
+            color:white;
+        }
+    </style>
+</head>
+
+<body>
+
+<div id="page1">
+    <div class="hero">
+        <p class="hero-tag">Now Streaming</p>
+
+        <h1 class="hero-title">
+            skusta <span>Clee</span>
+        </h1>
+
+        <p class="hero-sub">
+            Experience the Music of Skusta Clee album  music.
+        </p>
+
+        <div class="hero-btns">
+            <button class="btn-primary">Play Music</button>
+            <button class="btn-outline">Browse Album</button>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
